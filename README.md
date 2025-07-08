@@ -51,7 +51,7 @@
 2. 下载poppler并解压到项目同级目录（需包含 poppler/bin）
 3. 运行主程序  
    ```
-   python pdf_jpg_converter_app_copyright.py
+   python pdf_jpg_converter1.1.py
    ```
 
 ### 4. 打包EXE（开发者参考）
@@ -59,7 +59,7 @@
 本工具已适配PyInstaller，poppler会一并打包，无需额外配置：
 
 ```
-pyinstaller --noconfirm --onefile --add-data "poppler;poppler" pdf_jpg_converter_app_copyright.py
+pyinstaller --noconfirm --onefile --add-data "poppler;poppler" pdf_jpg_converter1.1.py
 ```
 详见项目内相关说明。
 
