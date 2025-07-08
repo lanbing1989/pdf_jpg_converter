@@ -8,6 +8,7 @@
   - 支持批量选择PDF文件
   - 可自定义输出分辨率（DPI）
   - 自动在原PDF同目录下新建文件夹输出图片
+  - 支持超大、超多页PDF（上千页无压力），逐页生成图片，极低内存占用
 
 - **JPG转PDF**  
   - 支持批量选择图片（JPG）
@@ -45,7 +46,7 @@
 
 1. 安装依赖  
    ```
-   pip install pillow pdf2image
+   pip install pillow pdf2image PyPDF2
    ```
 2. 下载poppler并解压到项目同级目录（需包含 poppler/bin）
 3. 运行主程序  
@@ -64,9 +65,10 @@ pyinstaller --noconfirm --onefile --add-data "poppler;poppler" pdf_jpg_converter
 
 ---
 
-## 截图
+## 支持超大PDF和大图片说明
 
-![主界面](screenshot.png)
+- 采用逐页处理技术，可流畅处理上千页甚至更大PDF，内存占用极低。(1.1版本新增)
+- 图片输出采用Pillow像素限制解除，理论无限大图片都可转换，但转换极大文件需耐心等待。
 
 ---
 
